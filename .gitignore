@@ -1,0 +1,44 @@
+# --- Node.js / Next.js 関連 ---
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log
+frontend/yarn-debug.log
+frontend/yarn-error.log
+
+# --- Python / FastAPI 関連 ---
+backend/__pycache__/
+backend/.venv/
+backend/env/
+backend/.env
+backend/.env.*
+
+# --- VS Code / devcontainer 関連 ---
+.vscode/
+.devcontainer/.env
+*.code-workspace
+
+# --- Docker 関連 ---
+**/tmp/
+**/logs/
+**/*.pid
+**/*.sock
+
+# --- OS 固有の不要ファイル ---
+.DS_Store
+Thumbs.db
+
+# --- Python / Pydantic / Pipenv など（必要に応じて） ---
+pip-log.txt
+pip-delete-this-directory.txt
+__pypackages__/
+
+# --- その他の一般的な除外 ---
+*.log
+*.swp
+*.swo
+*.bak
+
+# --- Git ignore テンプレート自体の自己参照防止 ---
+# .gitignore

@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    container_name: app
+    volumes:
+      - .:/workspace:cached
+    ports:
+      - "3000:3000"  # Next.js
+      - "8000:8000"  # FastAPI
+    environment:
+      DATABASE_URL: postgresql://devuser:devpass@db:5432/app_db
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+      PYTHONPATH: /workspace/backend
+    working_dir: /workspace
+    depends_on:
+      - db
+    command: [".devcontainer/start.sh"]
+
+  db:
+    image: postgres:17
+    container_name: db
+    environment:
+      POSTGRES_USER: devuser
+      POSTGRES_PASSWORD: devpass
+      POSTGRES_DB: app_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

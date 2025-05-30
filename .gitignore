@@ -39,6 +39,7 @@ __pypackages__/
 *.swp
 *.swo
 *.bak
+.env
 
 # --- Git ignore テンプレート自体の自己参照防止 ---
 # .gitignore

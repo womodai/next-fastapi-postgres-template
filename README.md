@@ -2,15 +2,15 @@
 
 このリポジトリは、**Next.js (React 19 + Tailwind CSS v4)** フロントエンドと  
 **FastAPI + PostgreSQL** バックエンドの**フルスタック開発環境**を  
-**Docker + devcontainer + WSL2** 上に構築するためのテンプレートです。
+**Docker + devcontainer + WSL2** 上に構築するためのテンプレートです。(最終更新：2025-05-30)
 
 ## 📦 技術スタック
 
 | 分類             | 技術                            |
 |------------------|---------------------------------|
-| フロントエンド   | Next.js 14 (React 19, App Router) + Tailwind CSS v4 |
+| フロントエンド   | Next.js 15 (React 19, App Router) + Tailwind CSS v4 |
 | バックエンド     | FastAPI (Python 3.11)            |
-| データベース     | PostgreSQL 15                    |
+| データベース     | PostgreSQL 17                    |
 | 開発環境         | Docker, Docker Compose, WSL2, DevContainer |
 | バージョン管理   | GitHub（SSH認証対応済）          |
 
